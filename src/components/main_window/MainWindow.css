@@ -1,0 +1,73 @@
+.upper_tool_bar {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color: #204B75;
+    height: 22px;
+}
+
+.upper_tool_bar p {
+    color: #80A1C1;
+}
+
+.window {
+    width: 420px;
+    height: 180px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    background-color: #0E365D;
+}
+
+.normal_input {
+    width: 300px;
+    height: 18px;
+    padding: 4px 4px 4px 6px;
+    background-color: #204B75;
+    color: #8A8FC8;
+    border: none;
+}
+
+.outer_input_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 158px;
+}
+
+.input_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+    height: 150px;
+}
+
+#lower_tool_bar {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.button_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.button_large {
+    width: 25px;
+    height: 25px;
+}
+
+.button_small {
+    width: 14px;
+    height: 14px;
+    margin: 0 4px 0 0;
+}

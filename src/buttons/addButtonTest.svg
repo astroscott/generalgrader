@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg id="add" version="1.1" id="Add_Button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
+<style type="text/css">
+	#add {
+		fill: #80A1C1;
+		-webkit-transition: -webkit-transform .2s ease-out;
+    	-ms-transition: -ms-transform .2s ease-out;
+    	transition: transform .2s ease-out; 
+		-webkit-transition: .2s ease-in-out;
+		-ms-transition: .2s ease-in-out;
+		transition: .2s ease-in-out;
+		cursor: pointer;
+	}
+	#add:hover{
+		fill: #B19CD9;
+		transform:rotate(90deg);
+   		-ms-transform:rotate(90deg);
+    	-webkit-transform:rotate(90deg);
+	}
+</style>
+<path class="st0" d="M200,0C89.5,0,0,89.5,0,200s89.5,200,200,200s200-89.5,200-200S310.5,0,200,0z M332,226H226v106h-52V226H68v-52
+	h106V68h52v106h106V226z"/>
+</svg>

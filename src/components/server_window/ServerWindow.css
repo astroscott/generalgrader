@@ -1,0 +1,16 @@
+#server_window {
+    width: 150px;
+    color: #80A1C1;
+    margin: 0 0 0 20px;
+    background-color: #0E365D;
+}
+
+#server_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #356089;
+    margin: 5px;
+    height: 146px;
+}
