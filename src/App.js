@@ -9,62 +9,71 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      num_cat: 0,
-      cat_list: [],
-      total: 0
+      assignment_name: '',
+      assignment_total: 0,
+      categories: [],
+      id_maker: 0,
+      num_cats: 0,
+      student_name: ''
     };
-    this.inc_cat = this.inc_cat.bind(this);
-    this.del_cat = this.del_cat.bind(this);
-    this.get_total = this.get_total.bind(this);
-    this.del_single_cat = this.del_single_cat.bind(this);
-    this.test = this.test.bind(this);
+    this.delete_all  = this.delete_all.bind(this);
+    this.get_total   = this.get_total.bind(this);
+    this.increment   = this.increment.bind(this);
+    this.remove      = this.remove.bind(this);
+    this.test        = this.test.bind(this);
+    this.update_name = this.update_name.bind(this);
   }
 
-  num_cat_to_array(num) {
-    let array = [];
-    for (let i = 0; i < num; i++) {
-      array.push(i);
-    }
-    return array;
+  increment() {
+    let number = this.state.num_cats;
+    let id = this.state.id_maker;
+    
+    number = number + 1;
+    id = id + 1;
+    this.setState(state => {
+      const categories = state.categories.concat({id: id, name: 'Unnamed Category ' + id});
+      return {
+        categories,
+        num_cats: number,
+        id_maker: id
+      };
+    });
   }
 
-  inc_cat() { 
-    let num = this.state.num_cat;
-    num = num + 1;
-    this.setState({num_cat: num, cat_list: this.num_cat_to_array(num)});
+  remove(id) {
+    let number = this.state.num_cats;
+    let categories = this.state.categories;
+    number = number - 1
+    categories = categories.filter(item => item.id !== id);
+    this.setState({categories: categories, num_cats: number});
   }
 
-  del_cat() {
-    this.setState({num_cat: 0, cat_list: []})
+  delete_all() {
+    this.setState({categories: [], num_cats: 0})
   }
 
-  del_single_cat(num) {
-    let cat_list = this.state.cat_list;
-    let num_cat = this.state.num_cat;
-    cat_list.pop(num);
-    num_cat = num_cat - 1;
-    this.setState({num_cat: num_cat, cat_list: cat_list});
+  update_name(index, name) {
+    let categories = this.state.categories;
+    categories[index].name = name;
+    this.setState({categories: categories});
   }
 
   get_total(event) {
-    this.setState({total: event.target.value});
+    this.setState({assignment_total: event.target.value});
   }
 
   test() {
-    console.clear();
-    console.log(`cat_list ${this.state.cat_list}`);
-    console.log(`Number of Categories: ${this.state.num_cat}`);
-    console.log(`Assignment Total: ${this.state.total}`);
+    console.log(this.state);
   }
 
   render() {
     return (
       <div className="outer_container">
         <div className="ms_container">
-          <MainWindow inc_cat={this.inc_cat} del_cat={this.del_cat} return_total={this.get_total} test={this.test}/>
+          <MainWindow increment={this.increment} delete_all={this.delete_all} get_total={this.get_total} test={this.test}/>
           <ServerWindow />
         </div>
-          <CategoryWindowList del_self={this.del_single_cat} num_cat={this.state.num_cat} cat_list={this.state.cat_list} total={this.state.total}/>
+          <CategoryWindowList categories={this.state.categories} remove={this.remove} total={this.state.assignment_total} update_name={this.update_name}/>
       </div>
     );
   }

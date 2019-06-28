@@ -24,6 +24,8 @@
 }
 
 .normal_input {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
     width: 300px;
     height: 18px;
     padding: 4px 4px 4px 6px;

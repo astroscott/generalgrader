@@ -19,7 +19,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 10% 0 0 0;
   align-items: center;
   background-color: #181A1B;
 }
@@ -48,7 +47,7 @@ body {
 
 /* container */
 .outer_container{
-  margin: 0 0 20px 0;
+  margin: 10% 0 0 0;
 }
 
 .ms_container {

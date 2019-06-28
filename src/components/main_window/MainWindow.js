@@ -13,11 +13,11 @@ export class MainWindow extends React.Component {
                     <div className="input_container"> 
                         <input className="normal_input" type="text" id="student_name" name="student_name" placeholder="Student Name" />
                         <input className="normal_input" type="text" id="assignment_name" name="assignment_name" placeholder="Assignment Name"/>
-                        <input className="normal_input" type="number" id="assignment_value" name="assignment_value" placeholder="Total Points For Assignment" onKeyUp={this.props.return_total}/>
+                        <input className="normal_input" type="number" id="assignment_value" name="assignment_value" placeholder="Total Points For Assignment" onKeyUp={this.props.get_total}/>
                     </div>
                     <div className="button_container">
-                    < Add className="button_large" onClick={this.props.inc_cat} />
-                    < Delete className="button_large" onClick={this.props.del_cat} />
+                    < Add className="button_large" onClick={this.props.increment} />
+                    < Delete className="button_large" onClick={this.props.delete_all} />
                     < Submit className="button_large" onClick={this.props.test}/>
                     </div>  
                 </div>
