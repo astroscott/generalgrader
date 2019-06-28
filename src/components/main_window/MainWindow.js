@@ -11,14 +11,14 @@ export class MainWindow extends React.Component {
                 <div className="upper_tool_bar text_left"><p>General Grader Web Node</p></div>
                 <div className="outer_input_container">
                     <div className="input_container"> 
-                        <input className="normal_input" type="text" id="student_name" name="student_name" placeholder="Student Name" />
-                        <input className="normal_input" type="text" id="assignment_name" name="assignment_name" placeholder="Assignment Name"/>
-                        <input className="normal_input" type="number" id="assignment_value" name="assignment_value" placeholder="Total Points For Assignment" onKeyUp={this.props.get_total}/>
+                        <input className="normal_input" type="text" id="student_name" name="student_name" placeholder="Student Name" onKeyUp={this.props.get_all}/>
+                        <input className="normal_input" type="text" id="assignment_name" name="assignment_name" placeholder="Assignment Name" onKeyUp={this.props.get_all}/>
+                        <input className="normal_input" type="number" id="assignment_total" name="assignment_total" placeholder="Total Points For Assignment" onKeyUp={this.props.get_all}/>
                     </div>
                     <div className="button_container">
                     < Add className="button_large" onClick={this.props.increment} />
                     < Delete className="button_large" onClick={this.props.delete_all} />
-                    < Submit className="button_large" onClick={this.props.test}/>
+                    < Submit className="button_large" onClick={this.props.submit}/>
                     </div>  
                 </div>
             </div>
