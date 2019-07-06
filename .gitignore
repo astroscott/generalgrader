@@ -23,5 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # user specified directories
-/design_files
 /reference_material

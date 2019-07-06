@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/reset.css" />
+    </head>
+    <body class="dark">
+    <div class="outer_container">
+        <div class="ms_container">
+            <div class="window" id="main_window">
+                <div class="upper_tool_bar text_left"><p>General Grader Web Node</p></div>
+                <div class="outer_input_container">
+                    <div class="input_container"> 
+                        <input class="normal_input" type="text" id="student_name" name="student_name" placeholder="Student Name" />
+                        <input class="normal_input" type="text" id="assignment_name" name="assignment_name" placeholder="Assignment Name" required/>
+                        <input class="normal_input" type="text" id="assignment_value" name="assignment_value" placeholder="Total Points For Assignment" />
+                    </div>
+                    <div class="button_container">
+                            <object class="button_large" id='add_button' type="image/svg+xml" data="./resources/addButtonTest.svg">Your browser does not support SVGs</object>
+                            <object class="button_large" id='delete_button' type="image/svg+xml" data="./resources/deleteButtonTest.svg">Your browser does not support SVGs</object>
+                            <object class="button_large" id='submit_button' type="image/svg+xml" data="./resources/submitButtonTest.svg">Your browser does not support SVGs</object>
+                    </div>
+                </div>
+            </div>
+            <div id="server_window">
+                <div class="upper_tool_bar text_left"><p>Saved Configurations</p><object class="button_small" id="server_add_button" type="image/svg+xml" data="./resources/addButtonTest.svg">Your browser does not support SVGs</object></div>
+                <div id="server_area">No saved config</div>
+            </div>
+        </div>
+        <div class="child_window">
+            <div class="upper_input">
+                <input class="upper_input text_left" type="text" placeholder="Category Name" />
+                <object class="button_large" id='child_delete_button' type="image/svg+xml" data="./resources/deleteButtonTest.svg">Your browser does not support SVGs</object>
+            </div>
+            <div class="child_input_container">
+                <input class="small_input" type="text" id="weight1" name="weight1" placeholder="Student Score" />
+                <p class="divider">/</p>
+                <p class="divider" id="score">100</p>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

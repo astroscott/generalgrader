@@ -14,8 +14,8 @@ export class CategoryWindow extends React.Component {
     }
 
     calculate_grade() {
-        const student_score = Number(document.getElementById('student_score_' + this.props.id).value);
-        const weight = Number(document.getElementById('weight_' + this.props.id).value);  
+        let student_score = document.getElementById('student_score_' + this.props.id).value;
+        let weight = document.getElementById('weight_' + this.props.id).value;
         if (weight !== 0) {
             const grade = student_score / weight;
             this.props.update_cat_grade(this.props.index, grade);
@@ -42,7 +42,7 @@ export class CategoryWindow extends React.Component {
             <div className="child_input_container">
                 <input className="small_input" type="number" id={"student_score_" + this.props.id} name="student_score" placeholder="Student Score" onKeyUp={this.calculate_grade}/>
                 <p className="divider">/</p>
-                <input className="small_input" type="number" id={"weight_" + this.props.id} name="weight" placeholder="Weight" onKeyUp={this.calculate_grade}/>
+                <input className="small_input" type="text" id={"weight_" + this.props.id} name="weight" placeholder="Weight" onKeyUp={this.calculate_grade}/>
                 <p className="divider" id="score">Category Grade: {(this.props.grade * 100).toFixed(2)}%</p>
                 <p className="divider" id="score">Total Grade: {(this.props.total_grade * 100).toFixed(2)}%</p>
 
